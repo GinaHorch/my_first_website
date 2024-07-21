@@ -92,16 +92,43 @@
  /* header */
  header .mobile-header {
     padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
  }
 
  header button {
     all: unset;
  }
 
+ @media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 24px;
+    margin-right: 16px;
+  }
+
+  header .mobile-header .hamburger-icon {
+    display: none;
+  }
+}
+
  /* logo */
  .logo {
     height: 50px;
  }
+
+@media (min-width: 768px) {
+  .logo {
+    height: 100px;
+  }
+}
 
  /* .mobile-nav */
  .mobile-nav a {
@@ -112,9 +139,22 @@
  }
 
  /* .desktop-nav */
-  .desktop-nav {
-    display: none;
+ .desktop-nav {
+  display: none;
+}  
+
+/* this has not fixed the nav in my desktop? */
+@media (min-width: 768px) {
+  .desktop-nav a {
+    text-decoration: none;
+    font-size: larger;
+    color: var(--black)
   }
+
+  .desktop-nav {
+    display: inline-block;
+  }
+}
 
   /* .hamburger-icon */
   .hamburger-icon {
@@ -138,6 +178,17 @@
   .hero .hero-accent {
     color: var(--action);
   }
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 120px 56px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    max-width: 70%;
+  }
+}
 
 article {
     padding: 32px 16px;
