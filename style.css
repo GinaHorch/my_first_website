@@ -204,3 +204,14 @@ article p {
     margin-top: 8px;
     cursor: pointer;
 }
+
+/* footer */
+footer {
+    padding: 16px;
+    text-align: center;
+}
+
+.socials-icon {
+    width: 40px;
+    height: 40px;
+}
